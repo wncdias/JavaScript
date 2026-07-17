@@ -10,8 +10,9 @@ function abreviarNomeCompleto(nomeCompleto) {
     // Abrevia os nomes restantes e os junta em uma string
     const nomesAbreviados = palavras.map(nome => nome.charAt(0).toUpperCase() + '.').join(' ');
     // Retorna a string final com o último nome em maiúsculas
+    // ` => serve para interpolar variáveis dentro de uma string
     return `${ultimoNome.toUpperCase()}, ${nomesAbreviados}`;
 }
 
-console.log(abreviarNomeCompleto("João da Silva")); // Output: "J. D. SILVA"
+console.log(abreviarNomeCompleto("joão da silva")); // Output: "J. D. SILVA"
 console.log(abreviarNomeCompleto("Maria Clara de Souza")); // Output: "M. C. DE SOUZA"
